@@ -10,9 +10,9 @@
 </template>
 
 <script>
-    import { library } from '@fortawesome/fontawesome-svg-core'
-    import { faShoppingCart,faThList,faHome,faUser } from '@fortawesome/free-solid-svg-icons'
-    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+    import { library } from '_@fortawesome_fontawesome-svg-core@1.2.27@@fortawesome/fontawesome-svg-core/index'
+    import { faShoppingCart,faThList,faHome,faUser } from '@fortawesome/free-solid-svg-icons/index'
+    import { FontAwesomeIcon } from '_@fortawesome_vue-fontawesome@0.1.9@@fortawesome/vue-fontawesome/index'
     library.add([faUser,faShoppingCart,faThList,faHome])
 
     export default {
@@ -60,10 +60,11 @@
         border-top-style solid
         border-top-width 1px
         border-top-color #e4e4e4
+        background-color #fff
         width 100%
         height 50px
         padding 5px
-        position absolute
+        position fixed
         bottom 0
         display flex
         .bottom-nav-item{

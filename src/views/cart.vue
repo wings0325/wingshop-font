@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import BottomNav from '@/components/BottomNav'
+  import BottomNav from '@/components/common/BottomNav'
 
   export default {
     name:'cart',

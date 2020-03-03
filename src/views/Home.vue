@@ -7,16 +7,26 @@
     <!--搜索栏 -->
 
     <!--轮播图-->
-    <div class="carousel">
-      <cube-slide>
-        <cube-slide-item v-for="(item, index) in carousel" :key="index" @click.native="clickHandler(item, index)">
-          <a :href="item.url">
-            <img :src="item.image">
-          </a>
-        </cube-slide-item>
-      </cube-slide>
+    <div class="carousel-wrap">
+      <div class="carousel">
+        <cube-slide>
+          <cube-slide-item v-for="(item, index) in carousel" :key="index" @click.native="clickHandler(item, index)">
+            <a :href="item.url">
+              <img :src="item.image">
+            </a>
+          </cube-slide-item>
+        </cube-slide>
+      </div>
     </div>
     <!--轮播图-->
+
+    <!--商品分类-->
+    <product-class></product-class>
+    <!--商品分类-->
+
+    <!--商品列表-->
+    <product-list></product-list>
+    <!--商品列表-->
 
     <bottom-nav></bottom-nav>
   </div>
@@ -24,15 +34,19 @@
 
 <script>
 // @ is an alias to /src
-import BottomNav from '@/components/BottomNav'
+import BottomNav from '@/components/common/BottomNav'
 import SearchBar from '@/components/home/searchbar/SearchBar'
+import ProductClass from '@/components/home/class/ProductClass'
+import ProductList from '@/components/home/product/productlist/ProductList'
 import {Style,Slide} from 'cube-ui'
 
 export default {
   name: 'Home',
   components: {
     SearchBar,
-    BottomNav
+    BottomNav,
+    ProductClass,
+    ProductList
   },
   data:()=>{
     return {
@@ -67,11 +81,13 @@ export default {
 <style scoped lang="stylus">
   .home{
     box-sizing border-box
-    .carousel{
-      width 100%
-      height 150px
-      img{
+    .carousel-wrap{
+      .carousel{
         width 100%
+        height 150px
+        img{
+          width 100%
+        }
       }
     }
   }

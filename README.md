@@ -1,4 +1,4 @@
-# yyqshop
+# wingshop
 
 ## Project setup
 ```
