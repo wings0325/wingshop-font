@@ -1,8 +1,5 @@
 <template>
     <div class="product-list">
-        <div class="like">
-            <img src="../../../../assets/img/maybe_like.png" />
-        </div>
         <product-item v-for="(item,index) in items" :data="item" :key="index"></product-item>
     </div>
 </template>
@@ -69,13 +66,6 @@
     .product-list{
         box-sizing: border-box;
         margin: 5px;
-        padding 5px 5px
-        .like{
-            padding 10px 20px
-            text-align center
-            img{
-                width 50%
-            }
-        }
+        padding 5px 5px 56px
     }
 </style>

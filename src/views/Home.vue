@@ -25,6 +25,9 @@
     <!--商品分类-->
 
     <!--商品列表-->
+    <div class="like">
+      <img src="../assets/img/maybe_like.png" />
+    </div>
     <product-list></product-list>
     <!--商品列表-->
 
@@ -88,6 +91,13 @@ export default {
         img{
           width 100%
         }
+      }
+    }
+    .like{
+      padding 10px 20px 0
+      text-align center
+      img{
+        width 50%
       }
     }
   }
